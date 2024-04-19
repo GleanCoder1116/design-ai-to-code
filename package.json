@@ -1,0 +1,45 @@
+{
+  "name": "design-ai-to-code",
+  "displayName": "Design ai to code",
+  "version": "0.0.1",
+  "description": "将AI快速转为代码；选中基础模块直接生成相关代码",
+  "author": "glean",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package"
+  },
+  "dependencies": {
+    "@mastergo/plugin-typings": "^2.3.0",
+    "@plasmohq/messaging": "^0.6.2",
+    "plasmo": "0.83.0",
+    "property-information": "^6.4.1",
+    "react": "18.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "18.2.0",
+    "react-markdown": "8.0.7",
+    "rehype-highlight": "6.0.0"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.37.0",
+    "@ianvs/prettier-plugin-sort-imports": "4.1.1",
+    "@types/chrome": "0.0.258",
+    "@types/node": "20.11.5",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "prettier": "3.2.4",
+    "typescript": "5.3.3"
+  },
+  "manifest": {
+    "host_permissions": [
+      "https://*/**"
+    ],
+    "permissions": [
+      "scripting",
+      "contextMenus",
+      "activeTab",
+      "storage",
+      "tabs"
+    ]
+  }
+}

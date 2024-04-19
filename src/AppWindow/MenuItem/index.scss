@@ -1,0 +1,32 @@
+/* MenuItem.scss */
+.menu-item {
+    display: flex;
+    width: 214px;
+    padding: 6px 8px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    cursor: pointer;
+    :hover {
+      color: #4e4eda;
+      .menu-item-text {
+        color: #4e4eda;
+      }
+    }
+  }
+  
+  .icon-keyboard {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+  /* SVG内path样式省略，假设使用inline style或另外定义类 */
+  .menu-item-text {
+    flex: 1 0 0;
+    color: var(--slate-700, #334155);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+  }

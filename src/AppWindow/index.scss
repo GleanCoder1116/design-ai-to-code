@@ -1,0 +1,211 @@
+/**
+  Window
+  应用主窗口
+ */
+.figmaai-window {
+  position: fixed;
+  right: 24px;
+  top: 24px;
+  width: 200px;
+  // height: 0;
+  max-height: calc(100vh - 48px);
+  opacity: 1;
+  border-radius: 16px;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 32%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
+  background-color: #fff;
+  color: #000;
+
+  .genCode {
+    padding: 8px 4px;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+  .show-ui-content {
+    height: 0;
+    position: fixed;
+    top: -1000px;
+    left: -1000px;
+  }
+
+  &-narrow {
+    width: 420px;
+
+    // Specific Component Styles in different Status
+  }
+
+  &-hidden {
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    height: 0;
+    // Specific Component Styles in different Status
+  }
+
+  // Layout Element Styles
+  /// Header
+  &-header {
+    width: 100%;
+    height: 32px;
+    padding: 8px;
+    border-bottom: 1px solid #efefef;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+
+    /// Handles & Actions
+    &-handles,
+    &-actions {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+    }
+
+    &-handles {
+      justify-content: flex-start;
+    }
+
+    &-actions {
+      justify-content: flex-end;
+    }
+
+    /// Content
+    &-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex: auto;
+    }
+
+    &-title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 24px;
+      color: #000;
+    }
+  }
+
+  // Body
+  &-body {
+    font-size: 12px;
+    height: 0;
+    overflow: scroll;
+
+  }
+
+  // Footer
+  &-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: #f9f9f9;
+    color: #808080;
+
+    &-content,
+    &-actions {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-content {
+      justify-content: flex-start;
+    }
+
+    &-actions {
+      justify-content: flex-end;
+    }
+  }
+
+  // Children Element Styles
+  /// Common Buttons
+  &-drag {
+    width: 32px;
+    height: 32px;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &-close {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+
+  &-setting {
+    width: 28px;
+    height: 28px;
+    transition: color 0.2s linear;
+    cursor: pointer;
+
+    &:hover {
+      color: #000;
+    }
+
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  /// UserInfo
+  &-userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+    &-plan {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 22px;
+      color: #000;
+      cursor: pointer;
+      transition: color 0.3s linear;
+
+      &:hover {
+        color: #3d3d3d;
+      }
+
+      &-icon {
+        display: flex;
+      }
+    }
+
+    &-timer {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
